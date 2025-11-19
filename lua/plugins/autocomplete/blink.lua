@@ -1,5 +1,8 @@
 return {
-  { "L3MON4D3/LuaSnip", keys = {} },
+  {
+    "L3MON4D3/LuaSnip",
+    dependencies = { "rafamadriz/friendly-snippets" },
+  },
   {
     "saghen/blink.cmp",
     dependencies = {
@@ -23,13 +26,16 @@ return {
           },
         },
         keymap = {
-          ["<C-f>"] = {},
+          ["<CR>"] = { "accept", "fallback" }, -- aceita a sugestão quando o menu está aberto, senão faz enter normal
+          ["<Tab>"] = { "select_next", "fallback" }, -- navegar próxima sugestão
+          ["<S-Tab>"] = { "select_prev", "fallback" }, -- navegar anterior
+          ["<C-i>"] = {},                      -- teu mapping vazio, mantive
         },
         cmdline = {
-          enabled = false,
+          enabled = true,
           completion = { menu = { auto_show = true } },
           keymap = {
-            ["<CR>"] = { "accept_and_enter", "fallback" },
+            ["<CR>"] = { "accept", "fallback" },
           },
         },
         completion = {
