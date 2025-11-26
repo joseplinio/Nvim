@@ -8,17 +8,16 @@ return {
       sources = {
         -- Lua
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.stylua,
-        -- Python
-        null_ls.builtins.formattiing.pyright,
-        null_ls.builtins.diagnostics.pyright,
-        -- JavaScript / Type
+
+        -- Python (null-ls NÃO tem pyright)
+        null_ls.builtins.diagnostics.pylint,
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.isort,
+
+        -- JavaScript / TypeScript
         null_ls.builtins.formatting.biome,
-        null_ls.builtins.diagnostics.biome,
+        -- null_ls.builtins.diagnostics.biome,
 
-
-
-        require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
       },
     })
   end
