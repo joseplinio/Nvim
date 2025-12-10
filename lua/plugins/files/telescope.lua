@@ -1,6 +1,8 @@
 -- plugins/telescope.lua:
 return {
-    {
+
+-- NOTE
+  {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',
         dependencies = { 'nvim-lua/plenary.nvim' },
