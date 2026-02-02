@@ -11,4 +11,3 @@ for _, dir in ipairs(plugin_dirs) do
 end
 
 return M
-

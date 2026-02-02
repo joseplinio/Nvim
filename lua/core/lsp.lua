@@ -2,11 +2,11 @@ vim.lsp.enable({
   "ts_ls",
   "lua_ls",
   "rust_analyzer",
-
+  "docker_compose_language_service",
+  "prismals",
 })
 
 vim.diagnostic.config({
-  --    virtual_lines = true,
   virtual_text = true,
   underline = true,
   update_in_insert = false,
@@ -29,6 +29,6 @@ vim.diagnostic.config({
   },
 })
 
-vim.lsp.config('*', {
-  root_markers = { '.git' },
+vim.lsp.config("default", {
+  root_markers = { ".git" },
 })
