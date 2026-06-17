@@ -36,7 +36,7 @@ return {
         desc = "Delete buffer (Confirm)",
       },
       {
-        "<leader><space>",
+        "<c-p>",
         function()
           Snacks.picker.smart()
         end,
@@ -70,14 +70,6 @@ return {
         end,
         desc = "Notification History",
       },
-      {
-        "<leader>e",
-        function()
-          Snacks.explorer()
-        end,
-        desc = "File Explorer",
-      },
-      -- find
       {
         "<leader>fb",
         function()
