@@ -4,6 +4,7 @@ vim.lsp.enable({
   "rust_analyzer",
   "docker_compose_language_service",
   "prismals",
+  "egopls",
 })
 
 vim.diagnostic.config({
